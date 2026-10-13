@@ -179,15 +179,69 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 #carros table.shot td{font-size:15px}
 .cover h1{font-size:clamp(34px,5.4vw,60px)!important}
 .bring{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:15px}
+
+/* cronograma */
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);min-width:600px;font-variant-numeric:tabular-nums}
+.cal .ch{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);padding:6px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--ink)}
+.cal .cd{min-height:76px;padding:6px 6px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.cal .cd.we{background:color-mix(in srgb,var(--paper) 60%,transparent)}
+.cal .cd.bel{background:var(--blue-soft)}
+.cal .cd.rec{outline:1.5px dashed var(--green);outline-offset:-4px}
+.cal .dn{font-size:12px;color:var(--soft);font-weight:600}
+.cal .mk{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mark)}
+.cal .cd.rec .mk{color:var(--green)}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:3px 7px;border-radius:2px;text-decoration:none;white-space:nowrap;line-height:1.3}
+.chip.reel{background:var(--ink);color:var(--sheet)}
+.chip.car{background:var(--sheet);color:var(--green);border:1px solid var(--green)}
+.chip:hover{opacity:.85}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--soft);align-items:center}
+.legend i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:6px;border-radius:2px}
+.legend .l1{background:var(--ink)} .legend .l2{border:1px solid var(--green);background:var(--sheet)} .legend .l3{background:var(--blue-soft)} .legend .l4{outline:1.5px dashed var(--green);outline-offset:-2px}
+details.post summary{grid-template-columns:96px 1fr auto}
+details.post summary .dt{display:flex;flex-direction:column;font-size:12px;color:var(--soft);font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+details.post summary .dt b{font-family:var(--display);font-size:22px;color:var(--green);letter-spacing:0;line-height:1.1}
+details.post summary .pid{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--blue);margin-right:4px}
+details.post.bel summary{background:var(--blue-soft)}
+.capbox{display:flex;flex-direction:column;gap:8px;min-width:0}
+.capbox .k{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.caphead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cap{white-space:pre-line;font-size:15px;line-height:1.55;background:var(--paper);border:1px solid var(--line);padding:14px 16px;max-width:none}
+.cpy{font:600 12px var(--sans);letter-spacing:.04em;color:var(--green);background:transparent;border:1px solid var(--green);border-radius:2px;padding:5px 10px;cursor:pointer}
+.cpy:hover{background:var(--green);color:var(--sheet)}
+.hash{font-size:14px;color:var(--soft);word-break:break-word}
+@media (max-width:820px){details.post summary{grid-template-columns:72px 1fr}details.post summary .tag{grid-column:2}}
+
+/* índice */
+.toc{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border:1px solid var(--line);padding:10px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 4px}
+.toc .mono{margin-right:8px;color:var(--green)!important}
+.toc a{font-size:13px;font-weight:500;color:var(--ink);text-decoration:none;padding:4px 9px;border-radius:2px;white-space:nowrap}
+.toc a span{color:var(--blue);font-weight:600;margin-right:4px;font-variant-numeric:tabular-nums}
+.toc a:hover{background:var(--blue-soft)}
+.toc a.go{background:var(--green);color:var(--sheet)} .toc a.go span{color:var(--sheet)}
+.toc a.go:hover{opacity:.9;background:var(--green)}
+section.sheet,[id^="p-"]{scroll-margin-top:72px}
+@media (max-width:820px){.toc{position:static}}
 </style>
 
 <main class="wrap">
 <div class="brand"><span class="hive" style="font-size:22px;color:var(--ink)">hive</span><span>·&nbsp; estratégia viva para o Studio MJ</span></div>
+<nav class="toc" aria-label="Índice">
+  <span class="mono">Índice</span>
+  <a href="#s0"><span>01</span>Capa</a>
+  <a href="#s1"><span>02</span>Diagnóstico</a>
+  <a href="#s2"><span>03</span>Referências</a>
+  <a href="#s3"><span>04</span>No perfil</a>
+  <a href="#s4"><span>05</span>Pilares e manifesto</a>
+  <a href="#sq"><span>+</span>Palavras de vocês</a>
+  <a href="#s5"><span>06</span>Roteiros</a>
+  <a href="#s6"><span>07</span>Carrosséis e pendências</a>
+  <a href="#cronograma" class="go"><span>08</span>Cronograma de postagem</a>
+</nav>
 
 
 <!-- CAPA -->
-<section class="sheet" aria-labelledby="t0">
-  <div class="stamp"><span>Prancha 01/07</span><span>Capa</span><span>Esc. 1:1</span></div>
+<section class="sheet" id="s0" aria-labelledby="t0">
+  <div class="stamp"><span>Prancha 01/08</span><span>Capa</span><span>Esc. 1:1</span></div>
   <div class="cover">
     <div style="display:flex;flex-direction:column;gap:18px">
       <span class="mono">Studio MJ · Estratégia de conteúdo em vídeo</span>
@@ -197,9 +251,9 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
         <div class="k">Cliente</div><div>Studio MJ · Julia Montagnini e Maria Santos</div>
         <div class="k">Conceito</div><div>Do vazio</div>
         <div class="k">Entregas</div><div>9 vídeos + 4 carrosséis sem captação</div>
-        <div class="k">Captação</div><div>01/10: HIVE às 13h + estúdio às 14h (Campinas) · 2ª diária externa em Limeira</div>
+        <div class="k">Captação</div><div>01/10: HIVE às 13h + estúdio às 14h (Campinas) · 2ª diária provável em 23/10, em Limeira</div>
         <div class="k">Direção</div><div>HIVE · Yngrid (direção criativa) e Iara</div>
-        <div class="k">Situação</div><div><span class="mark">Proposta para aprovação</span> · estúdio em 01/10 · externa a combinar</div>
+        <div class="k">Situação</div><div><span class="mark">Proposta para aprovação</span> · dia 1 gravado em 01/10 · 2ª diária provável em 23/10</div>
       </div>
     </div>
     <figure class="plan" style="margin:0" aria-label="Desenho técnico de uma poltrona sozinha no fundo infinito, com os objetos do manifesto ao redor">
@@ -229,8 +283,8 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 </section>
 
 <!-- PROBLEMA -->
-<section class="sheet" aria-labelledby="t1">
-  <div class="stamp"><span>Prancha 02/07</span><span>Diagnóstico</span></div>
+<section class="sheet" id="s1" aria-labelledby="t1">
+  <div class="stamp"><span>Prancha 02/08</span><span>Diagnóstico</span></div>
   <span class="mono">O problema</span>
   <h2 id="t1">Quem chega no perfil ainda vê só uma parte do trabalho.</h2>
   <p class="lede">O perfil mostra muito do resultado visual dos projetos, principalmente os renders. Mas o trabalho do Studio MJ pode começar em momentos diferentes e envolver muito mais: briefing, medição, estudo, projeto, detalhamento, acompanhamento de obra e entrega.</p>
@@ -250,8 +304,8 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 </section>
 
 <!-- REFERÊNCIAS -->
-<section class="sheet" aria-labelledby="t2">
-  <div class="stamp"><span>Prancha 03/07</span><span>Referências</span><span>Análise HIVE · 24/09/2026</span></div>
+<section class="sheet" id="s2" aria-labelledby="t2">
+  <div class="stamp"><span>Prancha 03/08</span><span>Referências</span><span>Análise HIVE · 24/09/2026</span></div>
   <span class="mono">No que se inspirar em cada referência</span>
   <h2 id="t2">O que funciona nos perfis de referência, e o que vem de cada um.</h2>
   <p class="note">O índice compara cada post com a média da própria conta. 3x quer dizer que o post teve três vezes mais interações que um post comum daquele perfil. Por isso dá para comparar um perfil pequeno com um grande. A gente se inspira na mecânica (formato, estrutura e gancho), nunca nas palavras.</p>
@@ -259,8 +313,8 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 </section>
 
 <!-- O QUE JÁ FUNCIONA NELAS -->
-<section class="sheet" aria-labelledby="t3">
-  <div class="stamp"><span>Prancha 04/07</span><span>@studiomj.arq</span><span>40 posts</span></div>
+<section class="sheet" id="s3" aria-labelledby="t3">
+  <div class="stamp"><span>Prancha 04/08</span><span>@studiomj.arq</span><span>40 posts</span></div>
   <span class="mono">No próprio perfil</span>
   <h2 id="t3">O público de vocês já responde quando vê o trabalho acontecendo.</h2>
   <p class="lede">Em média, um post de vocês tem 57 interações e um reel tem cerca de 1,9 mil reproduções. O que ficou acima disso foi bastidor de serviço, que aparece pouco no feed. A estratégia é dar a esse tipo de conteúdo o espaço que hoje fica com o render.</p>
@@ -268,8 +322,8 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 </section>
 
 <!-- PILARES + MANIFESTO -->
-<section class="sheet" aria-labelledby="t4">
-  <div class="stamp"><span>Prancha 05/07</span><span>Pilares e manifesto</span></div>
+<section class="sheet" id="s4" aria-labelledby="t4">
+  <div class="stamp"><span>Prancha 05/08</span><span>Pilares e manifesto</span></div>
   <span class="mono">Pilares da série</span>
   <h2 id="t4">Seis assuntos, cada vídeo com uma função.</h2>
   <div class="pillars">
@@ -316,7 +370,7 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
   </div>
 </section>
 
-<section class="sheet" aria-labelledby="tq">
+<section class="sheet" id="sq" aria-labelledby="tq">
   <div class="stamp"><span>Anexo</span><span>Com as palavras de vocês</span></div>
   <span class="mono">O que vocês responderam e onde entrou</span>
   <h2 id="tq">As frases de vocês viraram roteiro.</h2>
@@ -335,19 +389,20 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 </section>
 
 <!-- ROTEIROS -->
-<section class="sheet" aria-labelledby="t5">
-  <div class="stamp"><span>Prancha 06/07</span><span>Roteiros</span><span>9 vídeos</span></div>
+<section class="sheet" id="s5" aria-labelledby="t5">
+  <div class="stamp"><span>Prancha 06/08</span><span>Roteiros</span><span>9 vídeos</span></div>
   <span class="mono">Captação</span>
   <h2 id="t5">Dois dias, nove vídeos.</h2>
   <div class="days">
     <div class="day"><span class="mono">Dia 1 · 01/10 · Campinas</span>
       <ol><li value="8">13h · HIVE: Como uma marca vira espaço? (durante a apresentação do projeto)</li><li value="2">14h · estúdio: Quem somos, o jogo (começamos por ele, para o clima ficar leve)</li><li value="3">Tudo aqui tem uma história</li><li value="9">Como um projeto começa no Studio MJ? (fala)</li><li value="4">Qual é o seu momento? (narração e fecho)</li><li value="1">Manifesto: Do vazio (imagens primeiro, voz depois)</li></ol></div>
-    <div class="day"><span class="mono">Dia 2 · Externa · Limeira</span>
+    <div class="day"><span class="mono">Dia 2 · 23/10 (provável) · Limeira</span>
       <ol><li value="5">Nosso primeiro projeto faz 3 anos (loja)</li><li value="6">3 anos depois, o projeto ainda funciona? (loja, com a proprietária)</li><li value="7">Diário de obra: Apto Afeto, EP. 01</li></ol>
       <span class="mono" style="margin-top:6px">Ao longo dos dois dias</span>
       <ol><li>B-roll do vídeo 4: briefing, medição, amostras, obra, fornecedores, apresentação, planta de projeto arquitetônico e projetos comerciais.</li></ol></div>
   </div>
   <p class="note">O dia 1 fica em Campinas, com a HIVE às 13h e o estúdio às 14h. O dia 2 fica todo em Limeira: os dois vídeos da loja saem da mesma visita, e a data de publicação deles depende do aniversário de 3 anos. O vídeo da HIVE registra a apresentação real do projeto.</p>
+  <p class="note"><b>Situação em 13/10:</b> no dia 1 foram gravados o vídeo da HIVE, o Manifesto, Tudo aqui tem uma história e Como um projeto começa. Quem somos e Qual é o seu momento? ficaram para o dia 2.</p>
 
   <span class="mono" style="margin-top:6px">O que levar em cada dia</span>
   <div class="days">
@@ -383,8 +438,8 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
 </section>
 
 <!-- SEM CAPTAÇÃO + ORDEM + PENDÊNCIAS -->
-<section class="sheet" aria-labelledby="t6">
-  <div class="stamp"><span>Prancha 07/07</span><span>Carrosséis, feed e pendências</span></div>
+<section class="sheet" id="s6" aria-labelledby="t6">
+  <div class="stamp"><span>Prancha 07/08</span><span>Carrosséis, feed e pendências</span></div>
   <span class="mono">Sem captação · com as fotos que já existem</span>
   <h2 id="t6">Quatro carrosséis sobre as decisões por trás de cada projeto.</h2>
   <p class="lede">Cada carrossel explica o porquê de uma decisão real e termina com uma pergunta própria, ligada ao assunto dele, para puxar comentário. Os textos já estão fechados com as respostas de vocês.</p>
@@ -406,7 +461,7 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
     <span class="bel"><b>Carrossel Belanel</b>comercial<em>data ligada ao aniversário</em></span>
     <span><b>Como uma marca vira espaço?</b>comercial · HIVE</span>
   </div>
-  <p class="note">Ordem provisória. Os três conteúdos da Belanel giram em torno de 28/10, quando o projeto completa 3 anos da reinauguração (em 2026 cai numa quarta). O vídeo da origem sai alguns dias antes, o "3 anos depois" sai no próprio dia 28 e o carrossel sai depois, sempre intercalados com outros conteúdos do Studio MJ, para o feed não parecer uma campanha da loja. A alternância a manter: posicionamento → pessoas → projetos → serviços → histórias → obra → comercial.</p>
+  <p class="note">Ordem provisória, substituída pelo <a href="#cronograma">cronograma da prancha 08</a>. Os três conteúdos da Belanel giram em torno de 28/10, quando o projeto completa 3 anos da reinauguração (em 2026 cai numa quarta). O vídeo da origem sai alguns dias antes, o "3 anos depois" sai no próprio dia 28 e o carrossel sai depois, sempre intercalados com outros conteúdos do Studio MJ, para o feed não parecer uma campanha da loja. A alternância a manter: posicionamento → pessoas → projetos → serviços → histórias → obra → comercial.</p>
 
   <span class="mono" style="margin-top:10px">Respostas de vocês (29/09) e onde entraram</span>
   <ol class="qs">
@@ -423,8 +478,151 @@ table.shot td .who{display:block;font-size:11px;font-weight:600;letter-spacing:.
   </ol>
   <span class="mono" style="margin-top:10px">O que ainda falta</span>
   <ol class="qs">
-    <li><b>Data da diária em Limeira:</b> precisa sobrar tempo para editar antes de 28/10. Se der, no dia da instalação da marmoraria do Apto Afeto.</li>
+    <li><b>Data da próxima diária:</b> provável em 23/10, a confirmar. Se der, no dia da instalação da marmoraria do Apto Afeto.</li>
     <li><b>Apto Afeto:</b> a situação real do dia, que só aparece na gravação.</li>
+    <li><b>Belanel:</b> o @ do perfil da loja, para marcar nas legendas dos vídeos 5 e 6.</li>
+    <li><b>Link de contato da bio:</b> confirmar qual é, porque a legenda do vídeo 9 manda para ele.</li>
+  </ol>
+</section>
+
+
+<!-- CRONOGRAMA -->
+<section class="sheet" id="cronograma" aria-labelledby="t8">
+  <div class="stamp"><span>Prancha 08/08</span><span>Cronograma de postagem</span><span>13/10 a 24/11</span></div>
+  <span class="mono">Publicação</span>
+  <h2 id="t8">Treze posts em sete semanas, a partir de 13/10.</h2>
+  <p class="lede">Dois posts por semana, para o conteúdo render até o fim de novembro: um reel na terça (ou quinta) às 19h e um carrossel ou reel no sábado às 11h. Os vídeos da Belanel saem na semana de 28/10, dia dos 3 anos da reinauguração.</p>
+  <div class="tw"><div class="cal" role="table" aria-label="Calendário de postagem de 12/10 a 29/11"><div class="ch">seg</div><div class="ch">ter</div><div class="ch">qua</div><div class="ch">qui</div><div class="ch">sex</div><div class="ch">sáb</div><div class="ch">dom</div><div class="cd"><span class="dn">12/10</span><span class="mk">feriado</span></div><div class="cd"><span class="dn">13</span><a class="chip reel" href="#p-V01">V01 · 19h</a></div><div class="cd"><span class="dn">14</span></div><div class="cd"><span class="dn">15</span><a class="chip reel" href="#p-V03">V03 · 19h</a></div><div class="cd"><span class="dn">16</span></div><div class="cd we"><span class="dn">17</span></div><div class="cd we"><span class="dn">18</span></div><div class="cd"><span class="dn">19</span></div><div class="cd"><span class="dn">20</span><a class="chip reel" href="#p-V09">V09 · 19h</a></div><div class="cd"><span class="dn">21</span></div><div class="cd"><span class="dn">22</span></div><div class="cd rec"><span class="dn">23</span><span class="mk">diária · provável</span></div><div class="cd we"><span class="dn">24</span><a class="chip car" href="#p-C2">C2 · 11h</a></div><div class="cd we"><span class="dn">25</span></div><div class="cd"><span class="dn">26</span></div><div class="cd"><span class="dn">27</span></div><div class="cd bel"><span class="dn">28</span><span class="mk">3 anos Belanel</span><a class="chip reel" href="#p-V06">V06 · 19h</a></div><div class="cd"><span class="dn">29</span></div><div class="cd"><span class="dn">30</span></div><div class="cd we bel"><span class="dn">31</span><a class="chip reel" href="#p-V05">V05 · 11h</a></div><div class="cd we"><span class="dn">01/11</span></div><div class="cd"><span class="dn">02</span><span class="mk">feriado</span></div><div class="cd"><span class="dn">03</span><a class="chip reel" href="#p-V02">V02 · 19h</a></div><div class="cd"><span class="dn">04</span></div><div class="cd"><span class="dn">05</span></div><div class="cd"><span class="dn">06</span></div><div class="cd we"><span class="dn">07</span><a class="chip car" href="#p-C1">C1 · 11h</a></div><div class="cd we"><span class="dn">08</span></div><div class="cd"><span class="dn">09</span></div><div class="cd"><span class="dn">10</span><a class="chip reel" href="#p-V07">V07 · 19h</a></div><div class="cd"><span class="dn">11</span></div><div class="cd"><span class="dn">12</span></div><div class="cd"><span class="dn">13</span></div><div class="cd we"><span class="dn">14</span><a class="chip car" href="#p-C3">C3 · 11h</a></div><div class="cd we"><span class="dn">15</span></div><div class="cd"><span class="dn">16</span></div><div class="cd"><span class="dn">17</span><a class="chip reel" href="#p-V08">V08 · 19h</a></div><div class="cd"><span class="dn">18</span></div><div class="cd"><span class="dn">19</span></div><div class="cd"><span class="dn">20</span><span class="mk">feriado</span></div><div class="cd we bel"><span class="dn">21</span><a class="chip car" href="#p-C4">C4 · 11h</a></div><div class="cd we"><span class="dn">22</span></div><div class="cd"><span class="dn">23</span></div><div class="cd"><span class="dn">24</span><a class="chip reel" href="#p-V04">V04 · 19h</a></div><div class="cd"><span class="dn">25</span></div><div class="cd"><span class="dn">26</span></div><div class="cd"><span class="dn">27</span></div><div class="cd we"><span class="dn">28</span></div><div class="cd we"><span class="dn">29</span></div></div></div>
+  <div class="legend"><span><i class="l1"></i>Reel</span><span><i class="l2"></i>Carrossel</span><span><i class="l3"></i>Belanel</span><span><i class="l4"></i>Próxima diária (23/10, provável)</span></div>
+  <p class="note">Cada vídeo fica pronto até 3 dias depois da gravação e chega para aprovação de vocês pelo menos 3 dias antes de ir ao ar. A exceção é o vídeo dos 3 anos da Belanel: gravado na próxima diária, fica pronto em 25/10 e precisa da aprovação de vocês até 27/10. Os feriados de 12/10, 02/11 e 20/11 ficaram sem post. No dia 1 foram gravados o Manifesto, Tudo aqui tem uma história, Como um projeto começa e o vídeo da HIVE. Quem somos e Qual é o seu momento? ficaram para a próxima diária.</p>
+  <span class="mono" style="margin-top:6px">Legendas e stories · clique no post para abrir</span>
+  <p class="hash"><b>Hashtags de todos os posts:</b> #studiomj #arquitetura #arquiteturadeinteriores #designdeinteriores #projetoresidencial #projetocomercial #arquitetacampinas #arquitetalimeira</p>
+  <div class="scripts" id="posts"><details class="sc post" id="p-V01"><summary><span class="dt"><b>13/10</b>ter · 19h</span><h3><span class="pid">V01</span> Manifesto: Do vazio</h3><span class="tag">Reel · Manifesto</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Gravado em 01/10</p><p><span class="k">Edição pronta até</span>10/10</p><p><span class="k">Atenção</span>Fixar no topo do perfil.</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>O que acontece antes do 3D.</li><li>A gente chega antes da primeira parede.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V01">Copiar legenda</button></div><div class="cap">Todo lugar começa vazio. Mas nunca sem história.
+
+Antes de qualquer imagem em 3D, tem medição, escuta, estudo, escolha e muita coisa que ninguém vê. É nessa parte que o projeto nasce de verdade.
+
+Uma mede, a outra desenha. E as duas escutam: o que você ama, o que faz parte da sua vida e como você quer se sentir no seu espaço.
+
+Somos Julia e Maria. Somos o Studio MJ. A gente não desenha espaços. A gente transforma essência em lugar.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Bastidor da gravação: a poltrona sozinha no fundo infinito, com o texto &quot;o vídeo de hoje diz muito sobre a gente&quot;.</li><li>Trecho do reel com a enquete &quot;Você sabia que o 3D é só uma das etapas do projeto?&quot; Sim / Não.</li><li>Caixinha: &quot;O que você quer ver por trás dos nossos projetos?&quot;</li></ol></div></div></details><details class="sc post" id="p-V03"><summary><span class="dt"><b>15/10</b>qui · 19h</span><h3><span class="pid">V03</span> Tudo aqui tem uma história</h3><span class="tag">Reel · Histórias</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Gravado em 01/10</p><p><span class="k">Edição pronta até</span>12/10</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>A gente guarda tudo, e isso diz muito sobre como a gente projeta.</li><li>O que você guarda conta mais sobre você do que o seu estilo.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V03">Copiar legenda</button></div><div class="cap">Nada aqui foi escolhido só para decorar.
+
+Quadro, porta-retrato, caneca, coisa de viagem. A gente guarda o que marcou algum momento, e talvez por isso leve tanto disso para os projetos.
+
+Quando conhecemos alguém, não queremos saber só o estilo de que a pessoa gosta. Queremos entender o que ela guarda, o que ela ama e o que ela quer continuar vendo todos os dias.
+
+Porque uma casa não começa na decoração. Começa na história de quem vai viver ali.
+
+E na sua casa, qual objeto tem a melhor história? Conta pra gente aqui nos comentários.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Foto de um objeto da Julia com a história dele em uma frase.</li><li>Um objeto da Maria, no mesmo formato.</li><li>Caixinha: &quot;Qual objeto da sua casa você nunca deixaria para trás?&quot;. Repostar as melhores respostas no dia seguinte.</li></ol></div></div></details><details class="sc post" id="p-V09"><summary><span class="dt"><b>20/10</b>ter · 19h</span><h3><span class="pid">V09</span> Como um projeto começa no Studio MJ?</h3><span class="tag">Reel · Histórias</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Gravado em 01/10 + fotos dos projetos</p><p><span class="k">Edição pronta até</span>17/10</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Por que a gente faz tantas perguntas antes de desenhar.</li><li>Um casal que ama cozinhar junto mudou um projeto inteiro.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V09">Copiar legenda</button></div><div class="cap">Você sabe como um projeto começa aqui no Studio MJ?
+
+Antes de desenhar qualquer coisa, a gente pergunta. Muito. O briefing vai além de referência, estilo ou cor: queremos entender a rotina, os gostos, os hobbies e como você imagina viver aquele espaço.
+
+Já teve casal que ama cozinhar junto, e a cozinha virou o ponto de partida. Cliente com coleção de ímãs de viagem. Espaço pensado para livros e discos. E um spa no quintal que guiou o resto da casa.
+
+É conhecendo você que a gente consegue criar um espaço que faça sentido para a sua rotina.
+
+Quer começar o seu projeto? O contato está no link da bio.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Uma pergunta do briefing na tela, sem dados de cliente, com a caixinha &quot;Responde: o que não pode faltar na sua casa?&quot;</li><li>Foto da cozinha do projeto: &quot;aqui, tudo começou pela cozinha&quot;.</li><li>Link de contato: &quot;Quer começar o seu projeto?&quot;</li></ol></div></div></details><details class="sc post" id="p-C2"><summary><span class="dt"><b>24/10</b>sáb · 11h</span><h3><span class="pid">C2</span> Residência Canaã</h3><span class="tag">Carrossel · Projeto</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Fotos do projeto</p><p><span class="k">Edição pronta até</span>21/10</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Nenhuma parede mudou nesse projeto.</li><li>Quando a estrutura já está pronta, o que o projeto resolve?</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-C2">Copiar legenda</button></div><div class="cap">Comprou uma casa erguida, mas inacabada? O projeto está nos acabamentos.
+
+A Residência Canaã chegou até a gente com a estrutura pronta e sem acabamento. Não mexemos em nenhuma parede: o layout ficou como estava, e o projeto partiu dele.
+
+O trabalho foi o projeto de interiores da casa toda e os acabamentos da área externa e da piscina. As aberturas do gourmet já existiam, e a decisão foi como fechá-las: com esquadrias de vidro, para a área externa continuar presente de dentro.
+
+E você: prefere construir do zero ou comprar uma casa já erguida e deixar com a sua cara? Conta pra gente nos comentários.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Enquete com foto da casa: &quot;Construir do zero ou comprar erguida?&quot;</li><li>Foto das esquadrias do gourmet: &quot;a abertura já existia; o projeto decidiu como fechar&quot;.</li><li>Resultado da enquete com um card do carrossel.</li></ol></div></div></details><details class="sc post bel" id="p-V06"><summary><span class="dt"><b>28/10</b>qua · 19h</span><h3><span class="pid">V06</span> 3 anos depois, o projeto ainda funciona?</h3><span class="tag">Reel · Comercial · Belanel</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Próxima diária, em Limeira (23/10, provável)</p><p><span class="k">Edição pronta até</span>25/10</p><p><span class="k">Atenção</span>Dia dos 3 anos da reinauguração. Collab com a Belanel. Edição prioritária: precisa da aprovação de vocês até 27/10.</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Fomos perguntar para quem usa esse espaço todos os dias.</li><li>Bonito na reinauguração é o começo. E depois de 3 anos?</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V06">Copiar legenda</button></div><div class="cap">3 anos depois, o projeto ainda funciona?
+
+Estar bonito no dia da reinauguração é o começo. O teste é continuar funcionando depois de três anos de rotina, clientes e uso de verdade.
+
+Como esse projeto está completando 3 anos, a gente voltou para perguntar a quem vive esse espaço todos os dias. <span class="mark">[Frase da proprietária escolhida na edição.]</span>
+
+Parabéns pelos 3 anos da nova Belanel. É muito especial ver que o que um dia estava no papel continua fazendo sentido na vida real.
+
+Conhece alguém que está abrindo ou ampliando uma loja? Marca aqui.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Bastidor da conversa com a proprietária.</li><li>Story de parabéns marcando a Belanel, para ela repostar.</li><li>Trecho da resposta favorita com a enquete &quot;Você já conhecia a loja?&quot; Sim / Ainda não.</li></ol></div></div></details><details class="sc post bel" id="p-V05"><summary><span class="dt"><b>31/10</b>sáb · 11h</span><h3><span class="pid">V05</span> Nosso primeiro projeto faz 3 anos</h3><span class="tag">Reel · Comercial · Belanel</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Próxima diária, em Limeira (23/10, provável)</p><p><span class="k">Edição pronta até</span>28/10</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Nosso primeiro projeto faz 3 anos.</li><li>A gente ainda estava na faculdade quando tudo começou.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V05">Copiar legenda</button></div><div class="cap">Antes de existir o Studio MJ, existiu esse projeto.
+
+A gente ainda estava na faculdade quando recebeu a oportunidade de ampliar essa loja. Não tinha escritório nem equipe. Éramos só nós duas tentando fazer dar certo, e às vezes chegávamos atrasadas na aula porque tínhamos passado na obra antes.
+
+No dia da reinauguração, nossas famílias estavam aqui, a loja estava cheia e a gente ouvia: &quot;foram elas que fizeram&quot;.
+
+Três anos depois, voltar aqui e ver esse espaço funcionando ainda mexe com a gente. Foi aqui que entendemos que queríamos fazer isso juntas. E, de certa forma, foi aqui que o Studio MJ começou.
+
+Obrigada, <span class="mark">[@ da Belanel]</span>, por ter confiado na gente desde o começo.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Foto de 2023 da obra ou da reinauguração: &quot;3 anos atrás&quot;.</li><li>A mesma vista da loja hoje.</li><li>Caixinha: &quot;Qual foi o seu primeiro grande projeto?&quot;</li></ol></div></div></details><details class="sc post" id="p-V02"><summary><span class="dt"><b>03/11</b>ter · 19h</span><h3><span class="pid">V02</span> Quem somos: o jogo</h3><span class="tag">Reel · Quem somos</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Grava na próxima diária (23/10, provável)</p><p><span class="k">Edição pronta até</span>31/10</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Duas sócias, uma trena e uma prancheta.</li><li>A gente é diferente em muita coisa.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V02">Copiar legenda</button></div><div class="cap">Quem é quem no Studio MJ?
+
+Quem chega com a trena, quem já aparece com a prancheta, quem ama uma planilha e quem fala &quot;calma, vai dar certo&quot;.
+
+A gente é diferente em muita coisa. Mas no projeto, tudo passa pelas duas. E talvez seja justamente por isso que funcione tão bem.
+
+Marca aqui a pessoa que é o seu &quot;calma, vai dar certo&quot;.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Enquete: &quot;Você é mais a da trena ou a da prancheta?&quot;</li><li>Erro de gravação ou risada do bastidor do jogo.</li><li>Quiz: &quot;Quem guarda tudo porque tudo tem história?&quot; Julia / Maria.</li></ol></div></div></details><details class="sc post" id="p-C1"><summary><span class="dt"><b>07/11</b>sáb · 11h</span><h3><span class="pid">C1</span> Residência VF</h3><span class="tag">Carrossel · Projeto</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Fotos do antes e depois</p><p><span class="k">Edição pronta até</span>04/11</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Antes e depois, com o porquê de cada mudança.</li><li>Três decisões que mudaram a rotina dessa casa.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-C1">Copiar legenda</button></div><div class="cap">O que mudou da primeira visita até a entrega da Residência VF?
+
+Antes de qualquer escolha estética, vieram três decisões que mudaram a rotina da casa.
+
+A garagem ganhou cobertura, e chegar em casa deixou de depender do tempo. O chão de terra batida virou piso, e a casa fica limpa por mais tempo. Casa e empresa, que funcionavam juntas, foram separadas por dentro e na fachada, com o logo da empresa e dois interfones. Quem chega sabe para onde ir, e a casa volta a ser casa.
+
+Na sua casa, o que mais atrapalha a rotina hoje? Conta pra gente nos comentários.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Foto da garagem antes, com a enquete &quot;Dá para imaginar o depois?&quot; Sim / Não.</li><li>A fachada hoje, com os dois interfones.</li><li>Caixinha: &quot;O que mais atrapalha a rotina na sua casa?&quot;</li></ol></div></div></details><details class="sc post" id="p-V07"><summary><span class="dt"><b>10/11</b>ter · 19h</span><h3><span class="pid">V07</span> Diário de obra: Apto Afeto, EP. 01</h3><span class="tag">Reel · Obra</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Próxima diária, em Limeira (23/10, provável)</p><p><span class="k">Edição pronta até</span>07/11</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Apto Afeto, EP. 01: a parte que ninguém vê.</li><li>O diário de obra começou.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V07">Copiar legenda</button></div><div class="cap">Antes do resultado, tem uma obra inteira acontecendo.
+
+Esse é o Apto Afeto. A obra começou em setembro e, nessa visita, a gente veio acompanhar a colocação do piso, dos acabamentos e a parte elétrica<span class="mark">[ e a instalação da marmoraria, se cair no dia]</span>.
+
+Como esse é um projeto completo, a gente acompanha a obra: confere medida, alinha com os profissionais e toma decisões que mudam o resultado final. Nesse dia, por exemplo, precisamos resolver <span class="mark">[situação real do dia]</span>.
+
+Toda essa parte desaparece quando você vê o espaço pronto. Daqui até a entrega, a gente vai mostrando.
+
+Quer acompanhar o EP. 02? Comenta OBRA aqui.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Foto da obra no dia: &quot;onde a obra está hoje&quot;.</li><li>Vídeo curto da conferência no local ou da conversa com os profissionais.</li><li>Caixinha: &quot;O que você quer ver no EP. 02?&quot;</li></ol></div></div></details><details class="sc post" id="p-C3"><summary><span class="dt"><b>14/11</b>sáb · 11h</span><h3><span class="pid">C3</span> Brava Fit: antes de existir</h3><span class="tag">Carrossel · Comercial</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>3D do projeto</p><p><span class="k">Edição pronta até</span>11/11</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Para que serve o 3D, de verdade?</li><li>Melhor mudar agora do que na obra.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-C3">Copiar legenda</button></div><div class="cap">Antes de existir, esse espaço já precisa funcionar.
+
+A Brava Fit ainda está em projeto. E é nessa fase que o 3D faz mais diferença: não só para mostrar como vai ficar, mas para visualizar as escolhas, entender a relação entre os ambientes e antecipar decisões antes da obra.
+
+É muito melhor perceber agora que algo precisa mudar do que descobrir isso com a obra em andamento.
+
+Hoje a Brava Fit ainda está na tela. Daqui a pouco, ela existe.
+
+E você: gosta de acompanhar um projeto nessa fase ou prefere ver só o resultado pronto? Conta pra gente nos comentários.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Enquete: &quot;Fase de projeto ou resultado pronto?&quot;</li><li>Detalhe do 3D com uma decisão que mudou antes da obra.</li><li>&quot;Quer acompanhar a obra da Brava Fit por aqui?&quot; Sim / Não.</li></ol></div></div></details><details class="sc post" id="p-V08"><summary><span class="dt"><b>17/11</b>ter · 19h</span><h3><span class="pid">V08</span> Como uma marca vira espaço?</h3><span class="tag">Reel · Comercial · collab HIVE</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Gravado em 01/10</p><p><span class="k">Edição pronta até</span>14/11</p><p><span class="k">Atenção</span>Collab com @hiveconsultoria_.</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Antes de móvel, cor ou acabamento: entender a marca.</li><li>O projeto do escritório da HIVE começou por aqui.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V08">Copiar legenda</button></div><div class="cap">Como uma marca vira espaço?
+
+Quando a HIVE chamou a gente para projetar o escritório, o primeiro passo não foi pensar em móvel, cor ou acabamento. Foi entender a marca: como ela se comunica, o que quer transmitir e como as pessoas trabalham, criam e recebem ali.
+
+Nesse dia, a gente apresentou o estudo preliminar: layout, moodboard e referências. Ainda sem 3D, porque o projeto começa antes dele.
+
+Um projeto comercial precisa funcionar e também fazer sentido para a marca que existe ali. Esse é o primeiro passo do projeto da HIVE.
+
+Vai abrir ou reformar um espaço comercial? Salva esse vídeo para lembrar por onde começar.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Bastidor da apresentação: a mesa com o moodboard e a planta.</li><li>Repost do perfil da HIVE com a reação ao projeto.</li><li>Caixinha: &quot;Qual marca você acha que tem um espaço com a cara dela?&quot;</li></ol></div></div></details><details class="sc post bel" id="p-C4"><summary><span class="dt"><b>21/11</b>sáb · 11h</span><h3><span class="pid">C4</span> Belanel</h3><span class="tag">Carrossel · Comercial · Belanel</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Fotos da loja</p><p><span class="k">Edição pronta até</span>18/11</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Uma loja que cresceu sem parecer uma loja com anexo.</li><li>Marca, equipe e cliente: os três lados de um projeto comercial.</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-C4">Copiar legenda</button></div><div class="cap">O que faz alguém querer ficar mais tempo dentro de uma loja?
+
+Na Belanel, a loja cresceu e incorporou a loja do lado. O espaço precisava traduzir a marca, facilitar a rotina da equipe e deixar a compra mais agradável, sem parecer uma loja com um anexo.
+
+Para quem entra, duas passagens em arco ligam as duas lojas sem alterar a estrutura. Para a marca, uma parede com o logo, na mesma linguagem dos arcos, que chama atenção e vira foto. Para a equipe, mais armazenamento e mais expositores, com armários espalhados pela loja sem parecer estoque.
+
+E você: quando entra numa loja, o que mais faz você reparar no espaço? Vitrine, iluminação, disposição dos produtos ou provador?</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Quiz com as quatro opções da legenda.</li><li>Foto dos arcos, com a frase &quot;aqui eram duas lojas&quot;.</li><li>Resultado do quiz, com a opção mais votada mostrada na loja.</li></ol></div></div></details><details class="sc post" id="p-V04"><summary><span class="dt"><b>24/11</b>ter · 19h</span><h3><span class="pid">V04</span> Qual é o seu momento?</h3><span class="tag">Reel · Além do 3D</span></summary>
+<div class="scb"><div class="meta"><p><span class="k">Material</span>Narração na próxima diária (23/10, provável) + imagens dos dois dias</p><p><span class="k">Edição pronta até</span>21/11</p><p><span class="k">Outras opções de primeira linha</span></p><ul class="bring"><li>Em qual momento você está?</li><li>Consultoria, interiores ou projeto arquitetônico?</li></ul></div>
+<div class="capbox"><div class="caphead"><span class="k">Legenda</span><button type="button" class="cpy" id="cpy-V04">Copiar legenda</button></div><div class="cap">Nem todo projeto começa no mesmo lugar.
+
+Tem quem queira mudar um ambiente e ainda não saiba por onde começar. Quem tenha mil referências salvas e não consiga imaginar tudo junto. Quem tenha um terreno e precise pensar a casa desde a fachada. E quem esteja abrindo uma loja, um consultório ou um escritório e queira que o espaço tenha a identidade da marca.
+
+Pode ser uma consultoria de um ambiente, um projeto de interiores, simples ou completo, ou o projeto arquitetônico da casa. E quando o projeto é completo, a gente acompanha a obra até ele sair do papel.
+
+O ponto de partida muda. O cuidado com o resultado, não.
+
+E você, em qual momento está? Conta aqui nos comentários.</div><span class="k" style="margin-top:6px">Stories do dia</span><ol class="bring"><li>Quiz &quot;Qual é o seu momento?&quot;: um ambiente / muitas referências / um terreno / um espaço comercial.</li><li>As duas respondendo, em vídeo curto, o que cada momento pede.</li><li>Link de contato para quem se identificou.</li></ol></div></div></details></div>
+  <span class="mono" style="margin-top:10px">O que precisamos para manter as datas</span>
+  <ol class="qs">
+    <li><b>Próxima diária:</b> provável em 23/10, a confirmar com vocês. Ela precisa acontecer até 23/10 para o vídeo dos 3 anos da Belanel sair em 28/10. Nela entram Quem somos, Qual é o seu momento?, os dois vídeos da Belanel e o Diário de obra.</li>
+    <li><b>@ da Belanel no Instagram:</b> para a marcação e a collab dos vídeos 5 e 6.</li>
+    <li><b>Link de contato na bio:</b> usado no vídeo 9 e nos stories.</li>
   </ol>
 </section>
 
@@ -517,4 +715,22 @@ renderList(S,document.getElementById('scripts'),'Imagem','Fala / texto','V',true
 renderList(C,document.getElementById('carros'),'Card','Texto','C',false);
 </script>
 
+
+<script>
+(function(){
+  var H=document.querySelector('#cronograma .hash');
+  document.querySelectorAll('#posts .cpy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var c=b.closest('.capbox').querySelector('.cap');
+      var t=c.innerText.trim()+'\n\n'+(H?H.innerText.replace(/^Hashtags de todos os posts:\s*/,''):'');
+      var done=function(){b.textContent='Copiada';setTimeout(function(){b.textContent='Copiar legenda'},1800)};
+      var sel=function(){try{var r=document.createRange();r.selectNodeContents(c);var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Texto selecionado'}catch(e){}};
+      try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+    });
+  });
+  function openHash(){var id=location.hash.slice(1);if(!id)return;var d=document.getElementById(id);if(d&&d.tagName==='DETAILS'){d.open=true;}}
+  window.addEventListener('hashchange',openHash);openHash();
+  document.querySelectorAll('.cal .chip').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById(a.getAttribute('href').slice(1));if(d)d.open=true;});});
+})();
+</script>
 </body></html>
